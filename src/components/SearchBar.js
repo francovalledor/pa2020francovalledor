@@ -55,35 +55,15 @@ export function SearchBar(props) {
       </form>
 
       <form className="form-inline d-flex justify-content-center m-2">
-        <div className="form-group">
-          <label
-            className="filter-col p-2"
-            style={{ marginRight: 0 }}
-            htmlFor="pref-orderby"
-          >
-            Ordenar por:
-          </label>
-          <select
-            value={orden}
-            onChange={handleChangeOrdenar}
-            id="pref-orderby"
-            className="form-control m-2"
-          >
-            <option value={"price_asc"}>Menor Precio</option>
-            <option value={"price_desc"}>Mayor Precio</option>
-            <option value={"relevance"}>Relevancia</option>
-          </select>
-        </div>{" "}
-        {/* form group [order by] */}
-        <div className="form-group">
+        <div className="pt-4 mr-2">
           <div
             className="checkbox"
             style={{ marginLeft: "10px", marginRight: "10px" }}
           >
             <label>
-              Nuevo:
+              Nuevo
               <input
-                className="m-2"
+                className="m-1"
                 name="nuevo"
                 type="checkbox"
                 checked={nuevo}
@@ -96,9 +76,9 @@ export function SearchBar(props) {
             style={{ marginLeft: "10px", marginRight: "10px" }}
           >
             <label>
-              Usado:
+              Usado
               <input
-                className="m-2"
+                className="m-1"
                 name="usado"
                 type="checkbox"
                 checked={!nuevo}
@@ -107,6 +87,25 @@ export function SearchBar(props) {
             </label>
           </div>
         </div>
+        <div className="ml-2">
+          <label
+            className="filter-col text-muted"
+            style={{ marginRight: 0 }}
+            htmlFor="pref-orderby"
+          >
+            Ordenar por:
+          </label>
+          <select
+            value={orden}
+            onChange={handleChangeOrdenar}
+            id="pref-orderby"
+            className="form-control "
+          >
+            <option value={"price_asc"}>Menor Precio</option>
+            <option value={"price_desc"}>Mayor Precio</option>
+            <option value={"relevance"}>Relevancia</option>
+          </select>
+        </div>{" "}
       </form>
       <hr />
       <Paging setPaging={setPag} paging={pag} />
