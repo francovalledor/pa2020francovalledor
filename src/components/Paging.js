@@ -2,28 +2,22 @@ import React, { useEffect, useState } from "react";
 
 export function Paging(props) {
   const [total, setTotal] = useState(props.paging.total);
-  const [limit, setLimit] = useState(props.paging.limit || 30);
-  const [offset, setOffset] = useState(props.paging.offset || 1);
+  const [limit, setLimit] = useState(props.paging.limit);
+  const [offset, setOffset] = useState(props.paging.offset);
   const [primary_results, setPrimaryResults] = useState(
     props.paging.primary_results
   );
 
   function aumentarPaging() {
-    console.log("aumentar");
     setOffset(offset + limit);
-    console.log("offset: ", offset);
   }
   function disminuirPaging() {
-    console.log("disminuir");
     let auxOffset = offset - limit > 0 ? offset - limit : 1;
-    console.log("offset: ", auxOffset);
 
     setOffset(auxOffset);
   }
 
   useEffect(() => {
-    console.log("effect");
-
     props.setPaging({
       total,
       limit: limit,

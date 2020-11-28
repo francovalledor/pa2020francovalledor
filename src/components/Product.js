@@ -1,9 +1,8 @@
-import { producto, MELI } from "../api/api";
 import React from "react";
 import "./Product.css";
 
 export function Product(props) {
-  let product = props.product || producto;
+  let product = props.product;
   return (
     <div className="card rounded m-2" style={{ minWidth: "16em" }}>
       <div className="card-image p-2">
@@ -19,9 +18,9 @@ export function Product(props) {
           <h4 className="my-0 font-weight-normal">{product.title}</h4>
         </div>
         <div className="card-body">
-          <h1 className="card-title pricing-card-title">
+          <h2 className="card-title pricing-card-title">
             ${product.price} <small className="text-muted"></small>
-          </h1>
+          </h2>
           <ul className="list-unstyled mt-3 mb-4">
             <li>
               Condición: {product.condition === "used" ? "Usado" : "Nuevo"}

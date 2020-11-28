@@ -21,7 +21,6 @@ export function SearchBar(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("submit", query);
     props.getProducts(query, {
       sort: orden,
       itemNew: nuevo,
