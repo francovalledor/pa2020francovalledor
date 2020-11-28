@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Paginator } from "./Paginator";
 import { Paging } from "./Paging";
 export function SearchBar(props) {
   const [query, setQuery] = useState("Mario Bros");

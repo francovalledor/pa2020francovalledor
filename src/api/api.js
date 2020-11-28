@@ -3,10 +3,12 @@ import { fetchJSON } from "../utils/utils";
 const API_URL = "https://api.mercadolibre.com/";
 
 export class MELI {
-  constructor() {}
+  static async searchProduct(title, filters = {}) {
+    let endPoint = `sites/MLA/search?q=${title}`;
 
   static async searchProduct(title, filters = {}) {
     let endPoint = `sites/MLA/search?q=${title}`;
+    }
 
     if (filters && filters.hasOwnProperty("sort")) {
       endPoint = endPoint + `&sort=${filters.sort}`;
@@ -33,11 +35,13 @@ export class MELI {
         }
       }
     }
+    let paging = response.paging || {};
 
     const response = await fetchJSON(API_URL + endPoint);
 
     let productos = [];
     let paging = response.paging || {};
+    } catch {}
 
     try {
       response.results.forEach((result) =>
@@ -175,6 +179,7 @@ export const producto = {
     country: {
       id: "AR",
       name: "Argentina"
+      name: "Velez Sarsfield"
     },
     state: {
       id: "AR-C",
@@ -441,7 +446,3 @@ export const producto = {
     "brand_verified",
     "dragged_visits",
     "good_quality_picture",
-    "immediate_payment"
-  ],
-  order_backend: 2
-};

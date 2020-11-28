@@ -35,7 +35,7 @@ export function Paginator(props) {
           <button
             className="page-link btn-dark"
             value={i}
-            onClick={(e) => setCurrentPage(parseInt(e.target.value))}
+            onClick={(e) => setCurrentPage("parseInt(e.target.value)")}
           >
             {i}
           </button>
