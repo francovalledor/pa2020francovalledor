@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaAngleDoubleRight, FaAngleDoubleLeft } from "react-icons/fa";
 
 export function Paging(props) {
   const [total, setTotal] = useState(props.paging.total);
@@ -37,7 +38,7 @@ export function Paging(props) {
               disminuirPaging(e);
             }}
           >
-            Anterior
+            <FaAngleDoubleLeft /> Anterior
           </button>
         </li>
         <li
@@ -54,7 +55,7 @@ export function Paging(props) {
               aumentarPaging(e);
             }}
           >
-            Siguiente
+            Siguiente <FaAngleDoubleRight />
           </button>
         </li>
       </ul>
