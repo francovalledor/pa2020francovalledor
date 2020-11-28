@@ -4,11 +4,11 @@ import "./Product.css";
 export function Product(props) {
   let product = props.product;
   return (
-    <div className="card rounded m-2 " style={{ minWidth: "16em" }}>
+    <div className="card rounded m-2 p-2 " style={{ minWidth: "15em" }}>
       <div className="card-image p-4 d-flex justify-content-center">
         <img
-          style={{ minWidth: "15em" }}
-          className="img-fluid"
+          style={{ minWidth: "14em" }}
+          className="img-thumbnail"
           src={product.thumbnail}
           alt="Alternate Text"
         />

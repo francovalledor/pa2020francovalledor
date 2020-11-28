@@ -41,11 +41,11 @@ export function SearchBar(props) {
 
   return (
     <>
-      <form className="p-2 col-m-12" action="#!" onSubmit={handleSubmit}>
+      <form className=" p-2 col-m-12" action="#!" onSubmit={handleSubmit}>
         <div className="md-form col-md-12 ">
           <input
             style={{ fontSize: "1.5em" }}
-            className="form-control col-md-12"
+            className=" text-success form-control col-md-12"
             type="text"
             placeholder="Buscar"
             onChange={(e) => setQuery(e.target.value)}
