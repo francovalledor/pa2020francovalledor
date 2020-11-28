@@ -28,7 +28,7 @@ export function Paging(props) {
 
   return (
     <nav aria-label="...">
-      <ul className="pagination">
+      <ul className="pagination form-inline d-flex justify-content-center">
         <li className={offset === 1 ? "page-item disabled" : "page-item"}>
           <button
             className="page-link btn-dark"

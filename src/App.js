@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <div className="container p-2">
+      <div className="container p-2 ">
         <SearchBar
           getProducts={getProducts}
           paging={paging}

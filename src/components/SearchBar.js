@@ -41,7 +41,7 @@ export function SearchBar(props) {
 
   return (
     <>
-      <form className="form-inline" action="#!" onSubmit={handleSubmit}>
+      <form className="p-2 col-m-12" action="#!" onSubmit={handleSubmit}>
         <div className="md-form col-md-12 ">
           <input
             className="form-control col-md-12"
@@ -52,9 +52,8 @@ export function SearchBar(props) {
           />
         </div>
       </form>
-      <hr />
 
-      <form className="form-inline">
+      <form className="form-inline d-flex justify-content-center m-2">
         <div className="form-group">
           <label
             className="filter-col p-2"
@@ -67,7 +66,7 @@ export function SearchBar(props) {
             value={orden}
             onChange={handleChangeOrdenar}
             id="pref-orderby"
-            className="form-control"
+            className="form-control m-2"
           >
             <option value={"price_asc"}>Menor Precio</option>
             <option value={"price_desc"}>Mayor Precio</option>
