@@ -10,8 +10,7 @@ export function Catalog(props) {
   }
   return (
     <>
-      <h1 className="display-4">Catálogo</h1>
-      <div className="container">
+      <div className="container mt-4">
         <div className="card-deck">
           <div className="card-group">{products ? renderProducts() : ""}</div>
         </div>
