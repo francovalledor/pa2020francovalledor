@@ -20,7 +20,7 @@ export function Product(props) {
         </div>
         <div className="card-body">
           <h1 className="card-title pricing-card-title">
-            $15 <small className="text-muted"></small>
+            ${product.price} <small className="text-muted"></small>
           </h1>
           <ul className="list-unstyled mt-3 mb-4">
             <li>
