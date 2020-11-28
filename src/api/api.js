@@ -64,6 +64,7 @@ class Producto {
     this.id = meliResult.id;
     this.categoryId = meliResult.category_id;
     this.stock = meliResult.available_quantity;
+    this.permalink = meliResult.permalink;
     // this.category = MELI.getCategoryName(this.categoryId);
   }
 }
