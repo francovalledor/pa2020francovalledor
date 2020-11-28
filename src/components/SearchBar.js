@@ -44,6 +44,7 @@ export function SearchBar(props) {
       <form className="p-2 col-m-12" action="#!" onSubmit={handleSubmit}>
         <div className="md-form col-md-12 ">
           <input
+            style={{ fontSize: "1.5em" }}
             className="form-control col-md-12"
             type="text"
             placeholder="Buscar"

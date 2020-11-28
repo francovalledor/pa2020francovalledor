@@ -27,6 +27,7 @@ export default function App() {
           paging={paging}
           setPaging={setPaging}
         />
+
         <Catalog products={products} paging={paging} setPaging={setPaging} />
       </div>
     </div>
