@@ -1,2 +1,2 @@
-# pa2020francovalledor
-Created with CodeSandbox
+# Cliente API mercadolibre
+Examen Programación Avanzada 2020
